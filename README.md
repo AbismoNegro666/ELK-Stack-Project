@@ -30,7 +30,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name       | Function | IP Address | OS    |
 |------------|----------|------------|-------|
@@ -43,7 +42,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the jumo box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 76.87.86.xxx
 
 Machines within the network can only be accessed by Jump box via docker.
@@ -51,11 +50,12 @@ Machines within the network can only be accessed by Jump box via docker.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name       | Publicly Accessible | Allowed IP Addresses |
+|------------|---------------------|----------------------|
+|  Jump Box  |         YES         |     76.87.86.XXX     |
+|    Web-1   |          NO         |     20.89.42.156     |
+|    Web-2   |          NO         |     20.89.42.156     |
+| ELK Server |          NO         |     20.89.42.156     |
 
 ### Elk Configuration
 
