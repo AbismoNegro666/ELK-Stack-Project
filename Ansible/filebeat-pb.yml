@@ -1,0 +1,34 @@
+---
+- name: installing and launching
+  hosts: webservers
+  become: yes
+  tasks:
+
+  - name: download Filebeats deb
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebea>
+
+  - name: install FB deb
+    command: dpkg -i filebeat-7.4.0-amd64.deb
+
+
+  - name: copy FB deb
+    copy:
+      src: /etc/ansible/filebeat-config.yml
+      dest: /etc/filebeat/filebeat.yml
+
+
+  - name: enable and config sys module
+    command: filebeat modules enable system
+
+
+  - name: setup FB
+    command: filebeat setup
+
+
+  - name: start FB
+    command: service filebeat start
+  
+  - name: enable FB on boot
+    systemd:
+      name: filebeat
+      enabled: yes

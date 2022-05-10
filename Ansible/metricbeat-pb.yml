@@ -1,0 +1,29 @@
+---
+ - name: install and launch MB
+   hosts: webservers
+   become: yes
+   tasks:
+
+   - name: download MB deb
+     command: curl -L -O https://artifacts.elastic.co/downloads/beats/metric>
+   - name: install MB deb
+     command: dpkg -i metricbeat-7.4.0-amd64.deb
+
+   - name: copy MB deb
+     copy:
+       src: /etc/ansible/metricbeat-config.yml
+       dest: /etc/metricbeat/metricbeat.yml
+
+   - name: enable and config sys mod
+     command: metricbeat modules enable docker
+
+   - name: setup MB
+     command: metricbeat setup
+
+   - name: start MB
+     command: service metricbeat start
+
+   - name: enable MB on boot
+     systemd:
+       name: metricbeat
+       enabled: yes
