@@ -25,9 +25,10 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly effecient and secure by spreading workloads across multiple servers to prevent overloading servers. This feature will optimize productivity, and maximize uptime in addition to restricting unauthorized access to our network. Load balancers eliminate single-points of failure in the event one server is decommissioned due to ovewhelming traffic. On top of the load balancer providing security, we have our entire network in a security zone. We setup this network so that our VM's are only accessed via a jump box.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the machine metrics or quantifiable data (metricbeat) and system files (filebeat).
+
+- Filebeat's function is to import or 'ships' log file data to the ELK stack for analysis.
+- Metricbeat ships quantifiable data to the ELK stack such as CPU usage. Metric will allow users to diagnose machine resource issues.
 
 The configuration details of each machine may be found below.
 
@@ -47,15 +48,16 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 
 Machines within the network can only be accessed by Jump box via docker.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- The jump box machine (20 is the only machine is able to access the ELK server via Docker container.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name       | Publicly Accessible | Allowed IP Addresses |
 |------------|---------------------|----------------------|
 |  Jump Box  |         YES         |     76.87.86.XXX     |
-|    Web-1   |          NO         |     20.89.42.156     |
-|    Web-2   |          NO         |     20.89.42.156     |
-| ELK Server |          NO         |     20.89.42.156     |
+|    Web-1   |          NO         |     20.213.125.144   |
+|    Web-2   |          NO         |     20.213.125.144   |
+| ELK Server |          NO         |     20.213.125.144   |
 
 ### Elk Configuration
 
