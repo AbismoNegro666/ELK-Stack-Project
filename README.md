@@ -41,12 +41,12 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 
 
-|    Name   |   Function  | Private IP Address |   OS  |
-|:---------:|:-----------:|:------------------:|:-----:|
-|  JumpBox  |   Gateway   |      10.0.0.6      | Linux |
-|   Web 1   | DVWA Server |      10.0.0.4      | Linux |
-|   Web 2   | DVWA Server |      10.0.0.5      | Linux |
-| ProjectVM |  ELK Server |      10.1.0.4      | Linux |
+|    Name    |  Function  |   IP Address   |   OS  |
+|:----------:|:----------:|:--------------:|:-----:|
+|   JumpBox  |   Gateway  | 20.213.125.144 | Linux |
+|    Web-1   |    DVWA    |    10.0.0.4    | Linux |
+|    Web-2   |    DVWA    |    10.0.0.5    | Linux |
+| Project-VM | ELK server |    10.1.0.4    | Linux |
 
 
 ### Access Policies
@@ -66,12 +66,12 @@ What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
 
-|    Name   | Publicly Accessible | Allowed IP Address |
-|:---------:|:-------------------:|:------------------:|
-|  JumpBox  |         Yes         |    76.87.86.xxx    |
-|   Web 1   |          No         |      10.0.0.4      |
-|   Web 2   |          No         |      10.0.0.5      |
-| ProjectVM |          No         |      10.1.0.4      |
+|    Name    | Publicly Accessible | Allowed IP Address |
+|:----------:|:-------------------:|:------------------:|
+|   JumpBox  |         Yes         |    76.87.86.157    |
+|    Web-1   |          No         |   20.213.125.144   |
+|    Web-2   |          No         |   20.213.125.144   |
+| Project-VM |          No         |   20.213.125.144   |
 
 
 ### Elk Configuration
@@ -80,11 +80,11 @@ Ansible was used to automate configurations of the ELK machine. No configuration
 
 The playbook implements the following tasks:
 
-In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
 - Open terminal on local machine and ssh into JumpBox 'ssh sysadmin@20.213.125.144'
 - Once in the JumpBox machine; start>attach to container 'sudo docker start keen_uler' > 'sudo docker attach keen_euler'
-- Create a ansible playbook on YAML file with instruction on how to download and install ELK server <insert elk-pb.yml path>
-- Once completed and all files configured with the correct host and IP address we can run the ansible playbook
+- Create a ansible playbook on YAML file with instruction on how to download and install ELK server [ELK deployment](Ansible/elk-pb.yml)
+- Once completed and all files configured with the correct hostsand IP address we can run the ansible playbook
 - Running playbook via ansible 'ansible-playbook elk-pb.yml'
 - Once ran successfully, ssh into ELK-server machine 'ssh sysadmin@10.1.0.4' to confirm correct installation.
 
