@@ -1,16 +1,20 @@
-# Elk_Stack
+## ELK stack project
+
 Elk stack project; week13
+
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
-# - [ELK Environment](Diagram/ELK-NetworkDia.drawio.png)
+- [ELK Environment](Diagram/ELK-NetworkDia.drawio.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat and Metricbeat
 
-# - [ELK container deployment](Ansible/elk-pb.yml)
-# - [filebeat-config.yml](Ansible/filebeat-pb.yml)
-# - [metricbeat-config.yml](
+- [ELK deployment](Ansible/elk-pb.yml)
+- [filebeat playbook](Ansible/filebeat-pb.yml)
+- [filebeat-config.yml](Ansible/filebeat-config.yml)
+- [metricbeat playbook](Ansible/metricbeat-pb.yml)
+- [metricbeat-config.yml](Ansible/metricbeat-config.yml)
 
 This document contains the following details:
 
