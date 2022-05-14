@@ -82,15 +82,15 @@ The playbook implements the following tasks:
 
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
 - Open terminal on local machine and ssh into JumpBox 'ssh sysadmin@20.213.125.144'
-- Once in the JumpBox machine; start>attach to container 'sudo docker start keen_uler' > 'sudo docker attach keen_euler'
+- Once in the JumpBox machine; start>attach to docker container 'sudo docker start keen_uler' > 'sudo docker attach keen_euler'
 - Create a ansible playbook on YAML file with instruction on how to download and install ELK server [ELK deployment](Ansible/elk-pb.yml)
-- Once completed and all files configured with the correct hostsand IP address we can run the ansible playbook
+- Once completed and all files configured we can run the ansible playbook
 - Running playbook via ansible 'ansible-playbook elk-pb.yml'
-- Once ran successfully, ssh into ELK-server machine 'ssh sysadmin@10.1.0.4' to confirm correct installation.
+- Once ran successfully, ssh into ELK-server machine 'ssh sysadmin@10.1.0.4' to confirm proper installation.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-<insert ELK machine confirming docker ps -a>
+[Container listing in the ELK server AKA 'Project-VM'](Diagram/Project-VM ELK docker Container.jpg)
 
 ### Target Machines & Beats
 
