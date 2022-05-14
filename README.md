@@ -81,12 +81,12 @@ Ansible was used to automate configurations of the ELK machine. No configuration
 The playbook implements the following tasks:
 
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
-- Open terminal on local machine and ssh into JumpBox 'ssh sysadmin@20.213.125.144'
-- Once in the JumpBox machine; start>attach to docker container 'sudo docker start keen_uler' > 'sudo docker attach keen_euler'
+- Open terminal on local machine and ssh into JumpBox `ssh sysadmin@20.213.125.144`
+- Once in the JumpBox machine; start>attach to docker container `sudo docker start keen_uler` > `sudo docker attach keen_euler`
 - Create a ansible playbook on YAML file with instruction on how to download and install ELK server [ELK playbook](Ansible/elk-pb.yml)
 - Once completed and all files configured we can run the ansible playbook
-- Running playbook via ansible ansible-playbook elk-pb.yml
-- Once ran successfully, ssh into ELK-server machine 'ssh sysadmin@10.1.0.4' to confirm proper installation.
+- Running playbook via ansible `ansible-playbook elk-pb.yml`
+- Once ran successfully, ssh into ELK-server machine ssh sysadmin@10.1.0.4 to confirm proper installation.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -116,8 +116,8 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the <filebeat-config.yml file along with path> file to /etc/ansible/.
-- Update the the <filebeat-config.yml> to file to reflect your ELK-server's private IP address on lines #1106 and #1806.
+- Copy the [Filebeat-config](Ansible/filebeat-config.yml) file file to /etc/ansible/.
+- Update the the filebeat-config to file to reflect your ELK-server's private IP address on lines #1106 and #1806.
 - Run the playbook, ensure results are error-free and navigate to http://<localhost>:5601 on your machines browser to check that the installation worked as expected.
 
 Answer the following questions to fill in the blanks:
@@ -132,4 +132,4 @@ Answer the following questions to fill in the blanks:
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 	Navigate to YAML file '/etc/ansible/hosts' add you machines' private IP address to the 	appropriate host which could be 'webserver' and 'elk' (which was 	 manually named). Webserver host is designated for machine's 'web-1' and 'web-2' and elk host is for the 'ProjectVM' or ELK server machine.
 - Which URL do you navigate to in order to check that the ELK server is running?
-	curl http://localhost:5601
+	`curl http://localhost:5601`
