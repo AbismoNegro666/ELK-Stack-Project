@@ -97,13 +97,13 @@ The following screenshot displays the result of running `docker ps` after succes
 This ELK server is configured to monitor the following machines:
 
 List the IP addresses of the machines you are monitoring
-	Web-1: 10.0.0.4
-	Web-2: 10.0.0.5
+- Web-1: 10.0.0.4
+- Web-2: 10.0.0.5
 
 We have installed the following Beats on these machines:
 
-- Filebeats has been installed on machines 10.0.0.4 (w1) and 10.0.0.5(w2) <insert module status img>
-- Metricbeatshas been installed on machines 10.0.0.4 (w1) and 10.0.0.5(w2) <insert module status img>
+- Filebeats has been installed on machines 10.0.0.4 (Web-1) and 10.0.0.5(Web-22)
+- Metricbeatshas been installed on machines 10.0.0.4 (Web-1) and 10.0.0.5(Web-2)
 
 These Beats allow us to collect the following information from each machine:
 
