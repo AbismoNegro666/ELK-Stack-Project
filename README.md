@@ -102,7 +102,7 @@ List the IP addresses of the machines you are monitoring
 
 We have installed the following Beats on these machines:
 
-- Filebeats has been installed on machines 10.0.0.4 (Web-1) and 10.0.0.5(Web-22)
+- Filebeats has been installed on machines 10.0.0.4 (Web-1) and 10.0.0.5(Web-2)
 - Metricbeatshas been installed on machines 10.0.0.4 (Web-1) and 10.0.0.5(Web-2)
 
 These Beats allow us to collect the following information from each machine:
